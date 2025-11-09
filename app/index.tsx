@@ -1,6 +1,6 @@
 import { defaultConfig } from '@tamagui/config/v4'
 import { TamaguiProvider, createTamagui } from '@tamagui/core'
-import { Button, H1, Paragraph, YStack } from 'tamagui'
+import { H1, Paragraph, YStack } from 'tamagui'
 
 // you usually export this from a tamagui.config.ts file
 const config = createTamagui(defaultConfig)
@@ -28,9 +28,6 @@ export function HeroBanner() {
       <Paragraph size="$5" color="$color10">
         This is a hero banner built with Tamagui. Start building your amazing application.
       </Paragraph>
-      <Button theme="blue" size="$4">
-        Get Started
-      </Button>
     </YStack>
   )
 }
