@@ -37,8 +37,8 @@ export function HeroBanner() {
 
 export default () => {
   return (
-    <TamaguiProvider config={config}>{/* your app here */}
-      <Demo />
+    <TamaguiProvider config={config}>
+      <HeroBanner />
     </TamaguiProvider>
   )
 }
