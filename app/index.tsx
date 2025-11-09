@@ -22,7 +22,7 @@ export function HeroBanner() {
       backgroundColor="$background"
     >
       <H1 color="$color">
-        Welcome to Your App
+        Zine Ready
       </H1>
       <Paragraph size="$5" color="$color10">
         This is a hero banner built with Tamagui. Start building your amazing application.
