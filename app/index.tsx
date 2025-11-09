@@ -16,7 +16,6 @@ export function HeroBanner() {
   return (
     <YStack
       flex={1}
-      justify="center"
       align="center"
       padding="$4"
       space="$3"
