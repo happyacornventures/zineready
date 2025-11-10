@@ -15,7 +15,7 @@ declare module '@tamagui/core' {
 
 export function HeroBanner() {
   const handlePickDocument = async () => {
-    await DocumentPicker.getDocumentAsync({ type: 'application/pdf' });
+    const pickerResult = await DocumentPicker.getDocumentAsync({ type: 'application/pdf' }).then(console.log);
   };
 
   return (
