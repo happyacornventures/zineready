@@ -1,6 +1,7 @@
-import { defaultConfig } from '@tamagui/config/v4'
-import { TamaguiProvider, createTamagui } from '@tamagui/core'
-import { H1, Paragraph, Text, YStack } from 'tamagui'
+import { defaultConfig } from '@tamagui/config/v4';
+import { TamaguiProvider, createTamagui } from '@tamagui/core';
+import * as DocumentPicker from 'expo-document-picker';
+import { H1, Paragraph, Text, YStack } from 'tamagui';
 
 // you usually export this from a tamagui.config.ts file
 const config = createTamagui(defaultConfig)
@@ -13,6 +14,10 @@ declare module '@tamagui/core' {
 }
 
 export function HeroBanner() {
+  const handlePickDocument = async () => {
+    await DocumentPicker.getDocumentAsync({ type: 'application/pdf' });
+  };
+
   return (
     <YStack
       flex={1}
@@ -35,6 +40,7 @@ export function HeroBanner() {
         padding="$6"
         alignItems="center"
         marginTop="$4"
+        onPress={handlePickDocument}
       >
         <Text>Drop PDF here or click to upload</Text>
       </YStack>
