@@ -1,6 +1,7 @@
 import { defaultConfig } from '@tamagui/config/v4';
 import { TamaguiProvider, createTamagui } from '@tamagui/core';
 import * as DocumentPicker from 'expo-document-picker';
+import { useState } from 'react';
 import { H1, Paragraph, Text, YStack } from 'tamagui';
 
 // you usually export this from a tamagui.config.ts file
@@ -14,8 +15,12 @@ declare module '@tamagui/core' {
 }
 
 export function HeroBanner() {
+  const [result, setResult] = useState<String | null>(null);
+
   const handlePickDocument = async () => {
-    const pickerResult = await DocumentPicker.getDocumentAsync({ type: 'application/pdf' }).then(console.log);
+    const pickerResult = await DocumentPicker.getDocumentAsync({ type: 'application/pdf' });
+    console.log(pickerResult.assets[0].file?.name);
+    setResult(pickerResult.assets[0].file?.name ?? null);
   };
 
   return (
