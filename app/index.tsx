@@ -93,7 +93,7 @@ export function HeroBanner() {
         <Text>Drop PDF here or click to upload</Text>
       </YStack>
       <YStack>
-        <XStack>
+        <XStack justify="space-between">
           {fileName && (<Text>{fileName}</Text>)}
           {fileId && (<Text>{fileId}</Text>)}
         </XStack>
