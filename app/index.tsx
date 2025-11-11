@@ -3,7 +3,7 @@ import { TamaguiProvider, createTamagui } from '@tamagui/core';
 import * as DocumentPicker from 'expo-document-picker';
 import { useState } from 'react';
 import { Platform } from 'react-native';
-import { H1, Paragraph, Text, XStack, YStack } from 'tamagui';
+import { Button, H1, Paragraph, Text, XStack, YStack } from 'tamagui';
 
 // you usually export this from a tamagui.config.ts file
 const config = createTamagui(defaultConfig)
@@ -95,7 +95,7 @@ export function HeroBanner() {
       <YStack>
         <XStack justify="space-between">
           {fileName && (<Text>{fileName}</Text>)}
-          {fileId && (<Text>{fileId}</Text>)}
+          {fileId && (<Button>Download</Button>)}
         </XStack>
       </YStack>
     </YStack>
