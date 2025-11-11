@@ -52,6 +52,7 @@ export function HeroBanner() {
         throw new Error('Upload failed with status: ' + response.status);
       }
 
+      console.log('Upload successful:', await response.json());
       setResult(`Uploaded: ${asset.name}`);
     } catch (error) {
       console.error('Upload failed', error);
