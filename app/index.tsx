@@ -3,7 +3,7 @@ import { TamaguiProvider, createTamagui } from '@tamagui/core';
 import * as DocumentPicker from 'expo-document-picker';
 import { useState } from 'react';
 import { Platform } from 'react-native';
-import { H1, Paragraph, Text, YStack } from 'tamagui';
+import { H1, Paragraph, Text, XStack, YStack } from 'tamagui';
 
 // you usually export this from a tamagui.config.ts file
 const config = createTamagui(defaultConfig)
@@ -97,6 +97,12 @@ export function HeroBanner() {
         {fileId && (
           <Text marginTop="$2">File ID: {fileId}</Text>
         )}
+      </YStack>
+      <YStack>
+        <XStack>
+          {fileName && (<Text>{fileName}</Text>)}
+          {fileId && (<Text>{fileId}</Text>)}
+        </XStack>
       </YStack>
     </YStack>
   )
