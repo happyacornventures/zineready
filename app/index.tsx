@@ -2,6 +2,7 @@ import { defaultConfig } from '@tamagui/config/v4';
 import { TamaguiProvider, createTamagui } from '@tamagui/core';
 import * as DocumentPicker from 'expo-document-picker';
 import { useState } from 'react';
+import { Platform } from 'react-native';
 import { H1, Paragraph, Text, YStack } from 'tamagui';
 
 // you usually export this from a tamagui.config.ts file
@@ -19,8 +20,43 @@ export function HeroBanner() {
 
   const handlePickDocument = async () => {
     const pickerResult = await DocumentPicker.getDocumentAsync({ type: 'application/pdf' });
-    console.log(pickerResult.assets[0].file?.name);
-    setResult(pickerResult.assets[0].file?.name ?? null);
+
+    if (pickerResult.canceled || !pickerResult.assets?.[0]) {
+      return;
+    }
+
+    const asset = pickerResult.assets[0];
+    const formData = new FormData();
+
+    if (Platform.OS === 'web') {
+      // On web, the asset contains a file object
+      if (asset.file) {
+        formData.append('file', asset.file);
+      }
+    } else {
+      // On native, create the file object
+      formData.append('file', {
+        uri: asset.uri,
+        name: asset.name,
+        type: asset.mimeType,
+      } as any);
+    }
+
+    try {
+      const response = await fetch('http://localhost:3000/documents', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error('Upload failed with status: ' + response.status);
+      }
+
+      setResult(`Uploaded: ${asset.name}`);
+    } catch (error) {
+      console.error('Upload failed', error);
+      setResult('Upload failed.');
+    }
   };
 
   return (
