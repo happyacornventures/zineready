@@ -91,12 +91,6 @@ export function HeroBanner() {
         onPress={handlePickDocument}
       >
         <Text>Drop PDF here or click to upload</Text>
-        {fileName && (
-          <Text marginTop="$2">File: {fileName}</Text>
-        )}
-        {fileId && (
-          <Text marginTop="$2">File ID: {fileId}</Text>
-        )}
       </YStack>
       <YStack>
         <XStack>
