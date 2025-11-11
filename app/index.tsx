@@ -48,6 +48,9 @@ export function HeroBanner() {
         onPress={handlePickDocument}
       >
         <Text>Drop PDF here or click to upload</Text>
+        {result && (
+          <Text marginTop="$2">File: {result}</Text>
+        )}
       </YStack>
     </YStack>
   )
