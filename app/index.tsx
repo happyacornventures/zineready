@@ -18,6 +18,7 @@ declare module '@tamagui/core' {
 export function HeroBanner() {
   const [result, setResult] = useState<String | null>(null);
   const [fileName, setFileName] = useState<String | null>(null);
+  const [fileId, setFileId] = useState<String | null>(null);
 
   const handlePickDocument = async () => {
     const pickerResult = await DocumentPicker.getDocumentAsync({ type: 'application/pdf' });
@@ -58,6 +59,7 @@ export function HeroBanner() {
 
       // setResult(`Uploaded: ${asset.name}`);
       setFileName(asset.name);
+      setFileId(responseObject.id);
     } catch (error) {
       console.error('Upload failed', error);
       setResult('Upload failed.');
