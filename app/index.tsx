@@ -94,6 +94,9 @@ export function HeroBanner() {
         {fileName && (
           <Text marginTop="$2">File: {fileName}</Text>
         )}
+        {fileId && (
+          <Text marginTop="$2">File ID: {fileId}</Text>
+        )}
       </YStack>
     </YStack>
   )
