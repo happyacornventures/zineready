@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { Platform } from 'react-native';
 import { Button, H1, Paragraph, Text, XStack, YStack } from 'tamagui';
 
-// you usually export this from a tamagui.config.ts file
 const config = createTamagui(defaultConfig)
 
 type Conf = typeof config
@@ -16,7 +15,6 @@ declare module '@tamagui/core' {
 }
 
 export function HeroBanner() {
-  const [result, setResult] = useState<string | null>(null);
   const [fileName, setFileName] = useState<string | null>(null);
   const [fileId, setFileId] = useState<string | null>(null);
 
@@ -56,13 +54,10 @@ export function HeroBanner() {
 
       const responseObject = await response.json();
 
-
-      // setResult(`Uploaded: ${asset.name}`);
       setFileName(asset.name);
       setFileId(responseObject.id);
     } catch (error) {
       console.error('Upload failed', error);
-      setResult('Upload failed.');
     }
   };
 
