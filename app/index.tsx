@@ -16,9 +16,9 @@ declare module '@tamagui/core' {
 }
 
 export function HeroBanner() {
-  const [result, setResult] = useState<String | null>(null);
-  const [fileName, setFileName] = useState<String | null>(null);
-  const [fileId, setFileId] = useState<String | null>(null);
+  const [result, setResult] = useState<string | null>(null);
+  const [fileName, setFileName] = useState<string | null>(null);
+  const [fileId, setFileId] = useState<string | null>(null);
 
   const handlePickDocument = async () => {
     const pickerResult = await DocumentPicker.getDocumentAsync({ type: 'application/pdf' });
