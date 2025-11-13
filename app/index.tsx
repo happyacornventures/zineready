@@ -118,7 +118,7 @@ export function HeroBanner() {
       <YStack>
         <XStack justify="space-between">
           {fileName && (<Text>{fileName}</Text>)}
-          {fileId && (<Button>Download</Button>)}
+          {fileId && (<Button onPress={handleDownloadDocument}>Download</Button>)}
         </XStack>
       </YStack>
     </YStack>
