@@ -66,6 +66,29 @@ export function HeroBanner() {
     }
   };
 
+  const handleDownloadDocument = async () => {
+    if (!fileId) return;
+
+    try {
+      const response = await fetch(`http://localhost:3000/documents/${fileId}`, {
+        method: 'GET',
+      });
+
+      if (!response.ok) {
+        throw new Error('Download failed with status: ' + response.status);
+      }
+
+      const blob = await response.blob();
+      const fileUrl = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = fileUrl;
+      link.download = fileName || 'download.pdf';
+      link.click();
+    } catch (error) {
+      console.error('Download failed', error);
+    }
+  };
+
   return (
     <YStack
       flex={1}
