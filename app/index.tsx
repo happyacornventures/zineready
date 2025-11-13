@@ -101,7 +101,7 @@ export function HeroBanner() {
         Zine Ready
       </H1>
       <Paragraph size="$5" color="$color10">
-        This is a hero banner built with Tamagui. Start building your amazing application.
+        Page Sorting and Rotation for Print Ready Zines
       </Paragraph>
       <YStack
         borderWidth={2}
