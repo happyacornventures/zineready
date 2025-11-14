@@ -93,19 +93,21 @@ export function HeroBanner() {
       backgroundColor="$background"
     >
       <H1>Zine Ready</H1>
-      <H2>Page Sorting and Rotation for Print Ready Zines</H2>
-      <YStack
-        borderWidth={2}
-        borderStyle="dashed"
-        borderColor="$borderColor"
-        borderRadius="$4"
-        padding="$6"
-        alignItems="center"
-        marginTop="$4"
-        onPress={handlePickDocument}
-      >
-        <Text>Drop PDF here or click to upload</Text>
-      </YStack>
+      <XStack>
+        <H2>Page Sorting and Rotation for Print Ready Zines</H2>
+        <YStack
+          borderWidth={2}
+          borderStyle="dashed"
+          borderColor="$borderColor"
+          borderRadius="$4"
+          padding="$6"
+          alignItems="center"
+          marginTop="$4"
+          onPress={handlePickDocument}
+        >
+          <Text>Drop PDF here or click to upload</Text>
+        </YStack>
+      </XStack>
       <YStack>
         <XStack justify="space-between">
           {fileName && (<Text>{fileName}</Text>)}
