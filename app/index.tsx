@@ -1,9 +1,8 @@
 import { defaultConfig } from '@tamagui/config/v4';
-import { TamaguiProvider, createTamagui } from '@tamagui/core';
 import * as DocumentPicker from 'expo-document-picker';
 import { useState } from 'react';
 import { Platform } from 'react-native';
-import { Button, H1, H2, Text, XStack, YStack } from 'tamagui';
+import { Button, H1, H2, TamaguiProvider, Text, View, XStack, YStack, createTamagui } from 'tamagui';
 
 const config = createTamagui(defaultConfig)
 
