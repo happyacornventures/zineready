@@ -92,12 +92,8 @@ export function HeroBanner() {
       space="$3"
       backgroundColor="$background"
     >
-      <H1 color="$color">
-        Zine Ready
-      </H1>
-      <H2 size="$5" color="$color10">
-        Page Sorting and Rotation for Print Ready Zines
-      </H2>
+      <H1>Zine Ready</H1>
+      <H2>Page Sorting and Rotation for Print Ready Zines</H2>
       <YStack
         borderWidth={2}
         borderStyle="dashed"
