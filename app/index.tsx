@@ -3,7 +3,7 @@ import { TamaguiProvider, createTamagui } from '@tamagui/core';
 import * as DocumentPicker from 'expo-document-picker';
 import { useState } from 'react';
 import { Platform } from 'react-native';
-import { Button, H1, Paragraph, Text, XStack, YStack } from 'tamagui';
+import { Button, H1, H2, Text, XStack, YStack } from 'tamagui';
 
 const config = createTamagui(defaultConfig)
 
@@ -95,9 +95,9 @@ export function HeroBanner() {
       <H1 color="$color">
         Zine Ready
       </H1>
-      <Paragraph size="$5" color="$color10">
+      <H2 size="$5" color="$color10">
         Page Sorting and Rotation for Print Ready Zines
-      </Paragraph>
+      </H2>
       <YStack
         borderWidth={2}
         borderStyle="dashed"
