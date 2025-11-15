@@ -109,7 +109,7 @@ export function HeroBanner() {
           height="50vh"
           onPress={handlePickDocument}
         >
-          <Text>Drop PDF here or click to upload</Text>
+          <Text>Click to upload your zine</Text>
         </YStack>
       </XStack>
       <YStack>
