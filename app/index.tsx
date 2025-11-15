@@ -89,17 +89,17 @@ export function HeroBanner() {
       align="center"
       padding="$4"
       space="$3"
-      backgroundColor="$background"
+      backgroundColor="#F3E6C9"
     >
-      <H1>Zine Ready</H1>
+      <H1 color="#3A3A3A">Zine Ready</H1>
       <XStack width="100%" justify="center" alignItems="center">
-        <H2 width="40%" textAlign="left">
+        <H2 width="40%" textAlign="left" color="#3A3A3A">
           Page Sorting and Rotation for Print Ready Zines. No more large white margins on pages!
         </H2>
         <YStack
           borderWidth={2}
           borderStyle="dashed"
-          borderColor="$borderColor"
+          borderColor="#C4B8A3"
           borderRadius="$4"
           padding="$6"
           alignItems="center"
@@ -109,7 +109,7 @@ export function HeroBanner() {
           height="50vh"
           onPress={handlePickDocument}
         >
-          <Text>Click to upload your zine</Text>
+          <Text color="#3A3A3A">Click to upload your zine</Text>
         </YStack>
       </XStack>
       <YStack>
