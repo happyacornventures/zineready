@@ -113,7 +113,7 @@ export function HeroBanner() {
         </YStack>
       </XStack>
       <YStack>
-        <XStack justify="space-between">
+        <XStack justify="space-between" width="100%" paddingLeft="10%" paddingRight="10%" alignItems="flex-end">
           {fileName && (<Text>{fileName}</Text>)}
           {fileId && (<Button onPress={handleDownloadDocument}>Download</Button>)}
         </XStack>
