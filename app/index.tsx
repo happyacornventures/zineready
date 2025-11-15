@@ -102,6 +102,9 @@ export function HeroBanner() {
           padding="$6"
           alignItems="center"
           marginTop="$4"
+          justifyContent="center"
+          width="40%"
+          height="50vh"
           onPress={handlePickDocument}
         >
           <Text>Drop PDF here or click to upload</Text>
