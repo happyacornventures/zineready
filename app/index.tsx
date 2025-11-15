@@ -92,8 +92,10 @@ export function HeroBanner() {
       backgroundColor="$background"
     >
       <H1>Zine Ready</H1>
-      <XStack width="100%" flex={1} justify="center">
-        <H2>Page Sorting and Rotation for Print Ready Zines</H2>
+      <XStack width="100%" justify="center" alignItems="center">
+        <H2 width="40%" textAlign="left">
+          Page Sorting and Rotation for Print Ready Zines. No more large white margins on pages!
+        </H2>
         <YStack
           borderWidth={2}
           borderStyle="dashed"
