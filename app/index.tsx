@@ -113,10 +113,10 @@ export function HeroBanner() {
         </YStack>
       </XStack>
       <YStack>
-        <XStack justify="space-between" width="100%" paddingLeft="10%" paddingRight="10%" alignItems="flex-end">
+        {fileName && fileId && (<XStack justify="space-between" width="80%" marginLeft="10%" marginRight="10%" alignItems="center" backgroundColor="#3A3A3A">
           {fileName && (<Text>{fileName}</Text>)}
           {fileId && (<Button onPress={handleDownloadDocument} backgroundColor={"#3A78F2"} color="white" hoverStyle={{ backgroundColor: '#2A68D2'}}>Download</Button>)}
-        </XStack>
+        </XStack>)}
       </YStack>
     </YStack>
   )
