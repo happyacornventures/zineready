@@ -1,4 +1,4 @@
-import { Ionicons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 import { defaultConfig } from '@tamagui/config/v4';
 import * as DocumentPicker from 'expo-document-picker';
 import { useState } from 'react';
@@ -110,7 +110,7 @@ export function HeroBanner() {
           height="50vh"
           onPress={handlePickDocument}
         >
-          <Ionicons name="star" size={24} color="#3A78F2" style={{ position: 'absolute', top: -8, right: -8, transform: [{ scale: 2 }, { rotate: '45deg' }] }} />
+          <AntDesign name="star" size={36} color="#3A78F2" style={{ position: 'absolute', top: -14, right: -14, transform: [{ rotate: '45deg' }] }} />
           <Text color="#3A3A3A">Click to upload your zine</Text>
         </YStack>
       </XStack>
