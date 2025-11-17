@@ -1,3 +1,4 @@
+import { Ionicons } from '@expo/vector-icons';
 import { defaultConfig } from '@tamagui/config/v4';
 import * as DocumentPicker from 'expo-document-picker';
 import { useState } from 'react';
@@ -109,6 +110,7 @@ export function HeroBanner() {
           height="50vh"
           onPress={handlePickDocument}
         >
+          <Ionicons name="star" />
           <Text color="#3A3A3A">Click to upload your zine</Text>
         </YStack>
       </XStack>
