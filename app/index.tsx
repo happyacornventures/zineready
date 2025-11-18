@@ -1,3 +1,5 @@
+import { Inter_900Black, useFonts } from '@expo-google-fonts/inter';
+import { Rubik_900Black } from '@expo-google-fonts/rubik';
 import { AntDesign } from '@expo/vector-icons';
 import { defaultConfig } from '@tamagui/config/v4';
 import * as DocumentPicker from 'expo-document-picker';
@@ -15,6 +17,11 @@ declare module '@tamagui/core' {
 }
 
 export function HeroBanner() {
+  const [loaded, error] = useFonts({
+    Inter_900Black,
+    Rubik_900Black,
+  });
+
   const [fileName, setFileName] = useState<string | null>(null);
   const [fileId, setFileId] = useState<string | null>(null);
 
@@ -83,6 +90,8 @@ export function HeroBanner() {
       console.error('Download failed', error);
     }
   };
+
+  if (!loaded) return null;
 
   return (
     <YStack
