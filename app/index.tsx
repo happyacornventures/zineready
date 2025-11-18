@@ -1,5 +1,5 @@
 import { Inter_900Black, useFonts } from '@expo-google-fonts/inter';
-import { Rubik_900Black } from '@expo-google-fonts/rubik';
+import { Rubik_400Regular, Rubik_500Medium, Rubik_900Black } from '@expo-google-fonts/rubik';
 import { AntDesign } from '@expo/vector-icons';
 import { defaultConfig } from '@tamagui/config/v4';
 import * as DocumentPicker from 'expo-document-picker';
@@ -20,6 +20,8 @@ export function HeroBanner() {
   const [loaded, error] = useFonts({
     Inter_900Black,
     Rubik_900Black,
+    Rubik_400Regular,
+    Rubik_500Medium,
   });
 
   const [fileName, setFileName] = useState<string | null>(null);
@@ -102,7 +104,7 @@ export function HeroBanner() {
       backgroundColor="#F3E6C9"
     >
       <YStack maxWidth="600px" justify="center" alignItems="center" margin="auto">
-        <H1 color="#3A3A3A" style={{ fontFamily: 'Rubik_900Black' }}>Zine Ready</H1>
+        <H1 color="#3A3A3A" style={{ fontFamily: 'Rubik_500Medium' }}>Zine Ready</H1>
         <H2 width="100%" textAlign="left" color="#3A3A3A" style={{ fontFamily: 'Inter_900Black' }}>
           Page Sorting and Rotation for Print Ready Zines. No more large white margins on pages!
         </H2>
