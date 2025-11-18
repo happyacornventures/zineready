@@ -101,9 +101,9 @@ export function HeroBanner() {
       space="$3"
       backgroundColor="#F3E6C9"
     >
-      <H1 color="#3A3A3A">Zine Ready</H1>
-      <XStack width="100%" justify="center" alignItems="center">
-        <H2 width="40%" textAlign="left" color="#3A3A3A">
+      <YStack maxWidth="600px" justify="center" alignItems="center" margin="auto">
+        <H1 color="#3A3A3A" style={{ fontFamily: 'Rubik_900Black' }}>Zine Ready</H1>
+        <H2 width="100%" textAlign="left" color="#3A3A3A" style={{ fontFamily: 'Inter_900Black' }}>
           Page Sorting and Rotation for Print Ready Zines. No more large white margins on pages!
         </H2>
         <YStack
@@ -115,19 +115,14 @@ export function HeroBanner() {
           alignItems="center"
           marginTop="$4"
           justifyContent="center"
-          width="40%"
+          width="100%"
           height="50vh"
           onPress={handlePickDocument}
         >
           <AntDesign name="star" size={36} color="#3A78F2" style={{ position: 'absolute', top: -14, right: -14, transform: [{ rotate: '45deg' }] }} />
-          <Text color="#3A3A3A">Click to upload your zine</Text>
+          <Text color="#3A3A3A" style={{ fontFamily: 'Inter_900Black' }}>Click to upload your zine</Text>
         </YStack>
-      </XStack>
-      <YStack>
-        {fileName && fileId && (<XStack justify="space-between" width="80%" marginLeft="10%" marginRight="10%" alignItems="center" backgroundColor="rgba(58, 58, 58, 0.1)" borderRadius="$4" padding="$2">
-          {fileName && (<Text>{fileName}</Text>)}
-          {fileId && (<Button onPress={handleDownloadDocument} backgroundColor={"#3A78F2"} color="white" hoverStyle={{ backgroundColor: '#2A68D2'}} pressStyle={{ backgroundColor: '#1A54B2' }} >Download</Button>)}
-        </XStack>)}
+        <Button width="100%" marginTop="$4" onPress={handleDownloadDocument} backgroundColor={"#3A78F2"} color="white" hoverStyle={{ backgroundColor: '#2A68D2'}} pressStyle={{ backgroundColor: '#1A54B2' }} >Download</Button>
       </YStack>
     </YStack>
   )
