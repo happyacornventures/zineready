@@ -99,38 +99,38 @@ export function HeroBanner() {
 
   return (
     <ScrollView>
-    <YStack
-      flex={1}
-      align="center"
-      padding="$4"
-      space="$3"
-      backgroundColor="#F3E6C9"
-      minHeight="100vh"
-    >
-      <YStack maxWidth="600px" justify="center" alignItems="center" margin="auto">
-        <H1 color="#3A3A3A" style={{ fontFamily: 'Rubik_500Medium' }}>Zine Ready</H1>
-        <H2 width="100%" textAlign="left" color="#3A3A3A" style={{ fontFamily: 'Inter_300Light' }}>
-          Page Sorting and Rotation for Print Ready Zines. No more large white margins on pages!
-        </H2>
-        <YStack
-          borderWidth={2}
-          borderStyle="dashed"
-          borderColor="#C4B8A3"
-          borderRadius="$4"
-          padding="$6"
-          alignItems="center"
-          marginTop="$4"
-          justifyContent="center"
-          width="100%"
-          height="50vh"
-          onPress={handlePickDocument}
-        >
-          <AntDesign name="star" size={36} color="#3A78F2" style={{ position: 'absolute', top: -14, right: -14, transform: [{ rotate: '45deg' }] }} />
-          <Text color="#3A3A3A" style={{ fontFamily: 'Inter_300Light' }}>Click to upload your zine</Text>
+      <YStack
+        flex={1}
+        align="center"
+        padding="$4"
+        space="$3"
+        backgroundColor="#F3E6C9"
+        minHeight="100vh"
+      >
+        <YStack maxWidth="600px" justify="center" alignItems="center" margin="auto">
+          <H1 color="#3A3A3A" style={{ fontFamily: 'Rubik_500Medium' }}>Zine Ready</H1>
+          <H2 width="100%" textAlign="left" color="#3A3A3A" style={{ fontFamily: 'Inter_300Light' }}>
+            Page Sorting and Rotation for Print Ready Zines. No more large white margins on pages!
+          </H2>
+          <YStack
+            borderWidth={2}
+            borderStyle="dashed"
+            borderColor="#C4B8A3"
+            borderRadius="$4"
+            padding="$6"
+            alignItems="center"
+            marginTop="$4"
+            justifyContent="center"
+            width="100%"
+            height="50vh"
+            onPress={handlePickDocument}
+          >
+            <AntDesign name="star" size={36} color="#3A78F2" style={{ position: 'absolute', top: -14, right: -14, transform: [{ rotate: '45deg' }] }} />
+            <Text color="#3A3A3A" style={{ fontFamily: 'Inter_300Light' }}>Click to upload your zine</Text>
+          </YStack>
+          <Button width="100%" marginTop="$4" onPress={handleDownloadDocument} backgroundColor={"#3A78F2"} color="white" hoverStyle={{ backgroundColor: '#2A68D2'}} pressStyle={{ backgroundColor: '#1A54B2' }} style={{ fontFamily: 'Inter_300Light' }}>Download</Button>
         </YStack>
-        <Button width="100%" marginTop="$4" onPress={handleDownloadDocument} backgroundColor={"#3A78F2"} color="white" hoverStyle={{ backgroundColor: '#2A68D2'}} pressStyle={{ backgroundColor: '#1A54B2' }} style={{ fontFamily: 'Inter_300Light' }}>Download</Button>
       </YStack>
-    </YStack>
     </ScrollView>
   )
 }
