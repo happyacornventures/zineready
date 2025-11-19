@@ -5,7 +5,7 @@ import { defaultConfig } from '@tamagui/config/v4';
 import * as DocumentPicker from 'expo-document-picker';
 import { useState } from 'react';
 import { Platform } from 'react-native';
-import { Button, H1, H2, TamaguiProvider, Text, YStack, createTamagui } from 'tamagui';
+import { Button, H1, H2, ScrollView, TamaguiProvider, Text, YStack, createTamagui } from 'tamagui';
 
 const config = createTamagui(defaultConfig)
 
@@ -98,6 +98,7 @@ export function HeroBanner() {
   if (!loaded) return null;
 
   return (
+    <ScrollView>
     <YStack
       flex={1}
       align="center"
@@ -129,6 +130,7 @@ export function HeroBanner() {
         <Button width="100%" marginTop="$4" onPress={handleDownloadDocument} backgroundColor={"#3A78F2"} color="white" hoverStyle={{ backgroundColor: '#2A68D2'}} pressStyle={{ backgroundColor: '#1A54B2' }} style={{ fontFamily: 'Inter_300Light' }}>Download</Button>
       </YStack>
     </YStack>
+    </ScrollView>
   )
 }
 
