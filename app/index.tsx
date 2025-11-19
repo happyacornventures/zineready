@@ -109,7 +109,7 @@ export function HeroBanner() {
       >
         <YStack maxWidth="600px" justify="center" alignItems="center" margin="auto">
           <H1 color="#3A3A3A" style={{ fontFamily: 'Rubik_500Medium' }}>Zine Ready</H1>
-          <H2 width="100%" textAlign="left" color="#3A3A3A" style={{ fontFamily: 'Inter_300Light' }}>
+          <H2 width="100%" textAlign="left" color="#3A3A3A" style={{ fontFamily: 'Inter_300Light' }} size="$6">
             Page Sorting and Rotation for Print Ready Zines. No more large white margins on pages!
           </H2>
           <YStack
