@@ -105,6 +105,7 @@ export function HeroBanner() {
       padding="$4"
       space="$3"
       backgroundColor="#F3E6C9"
+      minHeight="100vh"
     >
       <YStack maxWidth="600px" justify="center" alignItems="center" margin="auto">
         <H1 color="#3A3A3A" style={{ fontFamily: 'Rubik_500Medium' }}>Zine Ready</H1>
