@@ -1,4 +1,4 @@
-import { Inter_900Black, useFonts } from '@expo-google-fonts/inter';
+import { Inter_300Light, Inter_400Regular, Inter_900Black, useFonts } from '@expo-google-fonts/inter';
 import { Rubik_400Regular, Rubik_500Medium, Rubik_900Black } from '@expo-google-fonts/rubik';
 import { AntDesign } from '@expo/vector-icons';
 import { defaultConfig } from '@tamagui/config/v4';
@@ -19,6 +19,8 @@ declare module '@tamagui/core' {
 export function HeroBanner() {
   const [loaded, error] = useFonts({
     Inter_900Black,
+    Inter_400Regular,
+    Inter_300Light,
     Rubik_900Black,
     Rubik_400Regular,
     Rubik_500Medium,
@@ -105,7 +107,7 @@ export function HeroBanner() {
     >
       <YStack maxWidth="600px" justify="center" alignItems="center" margin="auto">
         <H1 color="#3A3A3A" style={{ fontFamily: 'Rubik_500Medium' }}>Zine Ready</H1>
-        <H2 width="100%" textAlign="left" color="#3A3A3A" style={{ fontFamily: 'Inter_900Black' }}>
+        <H2 width="100%" textAlign="left" color="#3A3A3A" style={{ fontFamily: 'Inter_300Light' }}>
           Page Sorting and Rotation for Print Ready Zines. No more large white margins on pages!
         </H2>
         <YStack
@@ -122,9 +124,9 @@ export function HeroBanner() {
           onPress={handlePickDocument}
         >
           <AntDesign name="star" size={36} color="#3A78F2" style={{ position: 'absolute', top: -14, right: -14, transform: [{ rotate: '45deg' }] }} />
-          <Text color="#3A3A3A" style={{ fontFamily: 'Inter_900Black' }}>Click to upload your zine</Text>
+          <Text color="#3A3A3A" style={{ fontFamily: 'Inter_300Light' }}>Click to upload your zine</Text>
         </YStack>
-        <Button width="100%" marginTop="$4" onPress={handleDownloadDocument} backgroundColor={"#3A78F2"} color="white" hoverStyle={{ backgroundColor: '#2A68D2'}} pressStyle={{ backgroundColor: '#1A54B2' }} >Download</Button>
+        <Button width="100%" marginTop="$4" onPress={handleDownloadDocument} backgroundColor={"#3A78F2"} color="white" hoverStyle={{ backgroundColor: '#2A68D2'}} pressStyle={{ backgroundColor: '#1A54B2' }} style={{ fontFamily: 'Inter_300Light' }}>Download</Button>
       </YStack>
     </YStack>
   )
