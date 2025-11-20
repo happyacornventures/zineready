@@ -128,7 +128,7 @@ export function HeroBanner() {
             <AntDesign name="star" size={36} color="#3A78F2" style={{ position: 'absolute', top: -14, right: -14, transform: [{ rotate: '45deg' }] }} />
             <Text color="#3A3A3A" style={{ fontFamily: 'Inter_300Light' }}>Click to upload your zine</Text>
           </YStack>
-          <Button width="100%" marginTop="$4" onPress={handleDownloadDocument} backgroundColor={"#3A78F2"} color="white" hoverStyle={{ backgroundColor: '#2A68D2'}} pressStyle={{ backgroundColor: '#1A54B2' }} style={{ fontFamily: 'Inter_300Light' }}>Download</Button>
+          {fileId && <Button width="100%" marginTop="$4" onPress={handleDownloadDocument} backgroundColor={"#3A78F2"} color="white" hoverStyle={{ backgroundColor: '#2A68D2'}} pressStyle={{ backgroundColor: '#1A54B2' }} style={{ fontFamily: 'Inter_300Light' }}>Download</Button>}
         </YStack>
       </YStack>
     </ScrollView>
