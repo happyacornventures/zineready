@@ -1,5 +1,5 @@
-import { Inter_300Light, Inter_400Regular, Inter_900Black, useFonts } from '@expo-google-fonts/inter';
-import { Rubik_400Regular, Rubik_500Medium, Rubik_900Black } from '@expo-google-fonts/rubik';
+import { Inter_300Light, useFonts } from '@expo-google-fonts/inter';
+import { Rubik_500Medium } from '@expo-google-fonts/rubik';
 import { AntDesign } from '@expo/vector-icons';
 import { defaultConfig } from '@tamagui/config/v4';
 import * as DocumentPicker from 'expo-document-picker';
@@ -18,11 +18,7 @@ declare module '@tamagui/core' {
 
 export function HeroBanner() {
   const [loaded, error] = useFonts({
-    Inter_900Black,
-    Inter_400Regular,
     Inter_300Light,
-    Rubik_900Black,
-    Rubik_400Regular,
     Rubik_500Medium,
   });
 
