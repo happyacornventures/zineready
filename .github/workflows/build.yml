@@ -19,6 +19,12 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build Expo app for web
         run: yarn build:web
+      - name: Add as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-web
+          path: ./dist
+          retention-days: 30
   release:
     name: Release
     runs-on: ubuntu-latest
