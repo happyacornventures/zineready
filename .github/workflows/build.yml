@@ -28,6 +28,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    needs: build
     permissions:
       contents: write
       packages: write
