@@ -57,7 +57,7 @@ jobs:
         with:
           name: app-web
           path: ./dist
-      - name: Validate release artifacts
-        run: ls . && ls dist
       - name: Compress release artifacts
         run: zip -r dist.zip ./dist
+      - name: Validate release artifacts
+        run: ls . && ls dist
