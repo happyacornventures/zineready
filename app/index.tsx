@@ -16,6 +16,8 @@ declare module '@tamagui/core' {
   interface TamaguiCustomConfig extends Conf {}
 }
 
+const url = 'http://localhost:3000';
+
 export function HeroBanner() {
   const [loaded, error] = useFonts({
     Inter_300Light,
@@ -50,7 +52,7 @@ export function HeroBanner() {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/documents', {
+      const response = await fetch(`${url}/documents`, {
         method: 'POST',
         body: formData,
       });
@@ -72,7 +74,7 @@ export function HeroBanner() {
     if (!fileId) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/documents/${fileId}`, {
+      const response = await fetch(`${url}/documents/${fileId}`, {
         method: 'GET',
       });
 
