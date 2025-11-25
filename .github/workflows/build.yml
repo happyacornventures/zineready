@@ -67,6 +67,6 @@ jobs:
       - name: Validate release artifacts
         run: ls . && ls dist
       - name: Upload Release Asset
-        run: gh release upload ${{ steps.release.outputs.new_release_version }} dist.zip
+        run: gh release upload v${{ steps.release.outputs.new_release_version }} dist.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
